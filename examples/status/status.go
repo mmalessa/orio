@@ -8,7 +8,7 @@ import (
 
 func main() {
 	orio.DebugMode = true
-	// defer orio.Close()
+	defer orio.Close()
 
 	btt := orio.Pin(orio.PH6)
 

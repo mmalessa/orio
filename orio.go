@@ -46,8 +46,8 @@ func (pin Pin) State() pinState {
 	return state
 }
 
-func (pin Pin) Detect() {
-
+func (pin Pin) Detect(edge pinEdge) {
+	//opiSetEdge(pin, edge)
 }
 
 func (pin Pin) EdgeDetected() {
@@ -81,4 +81,11 @@ const (
 const (
 	Low  pinState = 0
 	High pinState = 1
+)
+
+const (
+	NoEdge pinEdge = iota
+	RiseEdge
+	FallEdge
+	AnyEdge = RiseEdge | FallEdge
 )

@@ -8,6 +8,7 @@ var deviceDriversPath string = "/sys/class/gpio/"
 type pinMode uint8
 type pinNumber uint16
 type pinState uint8
+type pinEdge uint8
 
 func debug(text string) {
 	if !DebugMode {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"time"
+	"fmt"
 
 	"github.com/mmalessa/orio"
 )
@@ -14,7 +15,8 @@ func main() {
 
 	checkError(btt.Input())
 	for i:=0; i<10; i++ {
-		_ = btt.State()
+		state := btt.State()
+		fmt.Printf("State: %d", state)
 		time.Sleep(500 * time.Millisecond)
 	}
 	

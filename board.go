@@ -79,6 +79,27 @@ func opiReadPin(pin Pin) (pinState, error) {
 	return Low, nil
 }
 
+// func opiSetEdge(pin Pin, edge pinEdge) error {
+// 	path := filepath.Join(deviceDriversPath, fmt.Sprintf("gpio%d", pin), "edge")
+// 	debug(fmt.Sprintf("Set edge pin %d = %d (%s)", pin, edge, path))
+// 	f, err := os.OpenFile(path, os.O_WRONLY, 0200)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	defer f.Close()
+// 	switch edge {
+// 	case NoEdge:
+// 		f.WriteString("none")
+// 	case AnyEdge:
+// 		f.WriteString("both")
+// 	case RiseEdge:
+// 		f.WriteString("rising")
+// 	case FallEdge:
+// 		f.WriteString("falling")
+// 	}
+// 	return nil
+// }
+
 // OrangePi name = pin
 // pin = (position of letter in alphabet - 1) * 32 + number
 const (

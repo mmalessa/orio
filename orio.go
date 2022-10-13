@@ -46,26 +46,6 @@ func (pin Pin) State() pinState {
 	return state
 }
 
-func (pin Pin) Pull() error {
-	return fmt.Errorf("not implemented yet")
-}
-
-func (pin Pin) PullOff() error {
-	return fmt.Errorf("not implemented yet")
-}
-
-func (pin Pin) PullUp() {
-
-}
-
-func (pin Pin) PullDown() {
-
-}
-
-func (pin Pin) ReadPull() error {
-	return fmt.Errorf("not implemented yet")
-}
-
 func (pin Pin) Detect() {
 
 }

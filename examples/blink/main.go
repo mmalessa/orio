@@ -8,7 +8,7 @@ import (
 
 func main() {
 	orio.DebugMode = true
-	defer checkError(orio.Close())
+	defer orio.Close()
 
 	led1 := orio.Pin(orio.PH7)
 

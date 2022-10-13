@@ -65,6 +65,20 @@ func opiWritePin(pin Pin, state pinState) error {
 	return nil
 }
 
+func opiReadPin(pin Pin) (pinState, error) {
+	path := filepath.Join(deviceDriversPath, fmt.Sprintf("gpio%d", pin), "value")
+	debug(fmt.Sprintf("Read pin %d (%s)", pin, path))
+	state, err := os.ReadFile(path)
+	if err != nil {
+		return Low, err
+	}
+	debug(fmt.Sprintf("Pin %d, state: %s", pin, string(state[0])))
+	if state[0] == 0x31 {
+	  	return High, nil
+	}
+	return Low, nil
+}
+
 // OrangePi name = pin
 // pin = (position of letter in alphabet - 1) * 32 + number
 const (

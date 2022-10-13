@@ -41,13 +41,13 @@ func (pin Pin) Toggle() error {
 	return fmt.Errorf("not implemented yet")
 }
 
-func (pin Pin) Write(state pinState) error {
-	return fmt.Errorf("not implemented yet")
-}
-
-func (pin Pin) Read() pinState {
-	return Low
-	// fmt.Errorf("not implemented yet")
+func (pin Pin) State() pinState {
+	state, err := opiReadPin(pin)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("State %d\n", state)
+	return state
 }
 
 func (pin Pin) Pull() error {

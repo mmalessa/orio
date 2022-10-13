@@ -37,10 +37,6 @@ func (pin Pin) Low() error {
 	return opiWritePin(pin, Low)
 }
 
-func (pin Pin) Toggle() error {
-	return fmt.Errorf("not implemented yet")
-}
-
 func (pin Pin) State() pinState {
 	state, err := opiReadPin(pin)
 	if err != nil {

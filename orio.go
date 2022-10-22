@@ -42,7 +42,6 @@ func (pin Pin) State() pinState {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Printf("State %d\n", state)
 	return state
 }
 

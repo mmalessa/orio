@@ -1,4 +1,4 @@
-Package orio provides GPIO access on the OrangePi Zero
+Package orio provides GPIO access on the OrangePi Zero  
 (c) Marcin Malessa https://github.com/mmalessa/orio
 
 Early version - use at your own risk.

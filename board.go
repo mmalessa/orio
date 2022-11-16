@@ -74,7 +74,7 @@ func opiReadPin(pin Pin) (pinState, error) {
 	}
 	debug(fmt.Sprintf("Pin %d, state: %s", pin, string(state[0])))
 	if state[0] == 0x31 {
-	  	return High, nil
+		return High, nil
 	}
 	return Low, nil
 }
@@ -116,6 +116,10 @@ const (
 	PA10 pinNumber = 10
 	PA11 pinNumber = 11
 	PA12 pinNumber = 12
+	PA13 pinNumber = 13
+	PA14 pinNumber = 14
+	PA15 pinNumber = 15
+	PA16 pinNumber = 16
 	PC0  pinNumber = 64
 	PC1  pinNumber = 65
 	PC2  pinNumber = 66
